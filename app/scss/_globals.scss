@@ -1,0 +1,73 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+
+  @include breakpoint-down(large){
+    font-size: 78%;
+  }
+
+  @include breakpoint-down(medium){
+    font-size: 72%;
+  }
+
+  @include breakpoint-down(small){
+    /* font-size: 60%; */
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.hide{
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  position: relative;
+  min-width: 445px;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @include breakpoint-down(large){
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.min-width{
+  min-width: 445px;
+}
+
+.flex {
+    display: flex;
+
+    &--fd-col{
+        flex-direction: column;
+    }
+
+    &--ai-c{
+        align-items: center;
+    }
+
+    &--jc-c{
+        justify-content: center;
+    }
+
+    &--jc-e{
+      justify-content: flex-end;
+    }
+
+    &--jc-sb{
+      justify-content: space-between;
+    }
+}

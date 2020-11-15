@@ -1,0 +1,178 @@
+.info {
+  margin-bottom: 4.5rem;
+
+  @include breakpoint-down(small){
+    margin-bottom: 1rem; 
+   }
+
+  &__title {
+    text-align: center;
+    color: $darkBlue;
+    font-size: 1.875rem;
+    font-weight: 800;
+    margin-top: 3rem;
+    margin-bottom: 3.375rem;
+
+    @include breakpoint-down(xsmall){
+      font-size: 1.45rem;
+    }
+
+    span{
+      display: inline-block;
+      font-size: 1.375rem;
+      font-weight: 600;
+      transform: translateY(-25%);
+
+      @include breakpoint-down(xsmall){
+        font-size: 1.15rem;
+      }
+    }
+
+    div > img {
+      top: 50%;
+      transform: translateY(35%);
+    }
+  }
+
+  &__schedule {
+    h3 {
+      font-size: 2rem;
+      font-weight: 300;
+      color: $darkBlue;
+      margin-top: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @include breakpoint-down(small){
+      > div.flex{
+        flex-direction: column;
+        align-items: center;
+
+        > div{
+          margin-bottom: 4.5rem;
+        }
+      }
+
+      > div > h3{
+        @include breakpoint-down(small){
+          text-align: center;
+        }
+      }
+    }
+
+    &__program {
+      width: 51%;
+      min-width: 315px;
+      border-top: 0.1875rem solid $darkBlue;
+
+      @include breakpoint-down(large){
+        max-width: 557px;
+      }
+
+      @include breakpoint-down(small){
+        width: 525px;
+      }
+
+      @include breakpoint-down(xsmall){
+        width: 100%;
+      }
+
+      &__card {
+        width: 100%;
+        font-size: 1.2188rem;
+        color: $darkBlue;
+        border-bottom: 0.1875rem solid $darkBlue;
+
+        &__time {
+          width: 10rem;
+        }
+
+        &__info {
+          width: calc(100% - 8rem);
+
+          span.darkblue {
+            color: $darkBlue;
+            font-weight: 600;
+            line-height: 1.3;
+          }
+
+          ul{
+              list-style: none;
+              margin: 0;
+              padding-left: 0.5rem;
+          }
+        }
+
+        &--p-tb {
+          padding-top: 0.9375rem;
+          padding-bottom: 1.3125rem;
+        }
+
+        span {
+          color: $lightBlue;
+          font-size: 1.3438rem;
+          font-weight: 600;
+        }
+
+        &--info {
+          margin-left: 1.5rem;
+        }
+      }
+    }
+
+    &__hosts {
+      position: relative;
+      width: 47%;
+      min-width: 302px;
+      background-color: $greyish;
+      color: $darkBlue;
+      padding-top: 2.25rem;
+      padding-left: 1.5625rem;
+      padding-bottom: 2.25rem;
+      padding-right: 1.5625rem;
+
+      @include breakpoint-down(small){
+        width: 450px;
+      }
+
+      @include breakpoint-down(xsmall){
+        width: 90%;
+      }
+
+      &__card {
+        img {
+          width: 7.875rem;
+          height: 10.4375rem;
+        }
+
+        h3 {
+          font-size: 1.375rem;
+          padding-bottom: 0.25rem;
+          border-bottom: 0.0938rem solid $darkBlue;
+        }
+
+        div {
+          width: 26.125rem;
+          font-size: 1.0625rem;
+          margin-left: 1.25rem;
+          align-self: flex-end;
+
+          p {
+            margin: 0;
+            width: 96%;
+            
+            span.break{
+              display: block;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      &__card:not(:last-child) {
+        margin-bottom: 2.375rem;
+      }
+    }
+  }
+}

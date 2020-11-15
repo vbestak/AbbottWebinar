@@ -1,0 +1,43 @@
+.footer{
+    &__notice{
+        font-size: 12px;
+        font-weight: 400;
+
+        @include breakpoint-down(small){
+            text-align: center; 
+        }
+        
+        p{
+            margin: 0.625rem 0;
+            font-weight: 400;
+        }
+
+        span{
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+    }
+
+    &__logos{
+        margin-top: 3.5rem;
+        margin-bottom: 3.75rem;
+
+        @include breakpoint-down(medium){
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+
+            img{
+                margin-top: 1rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        img{
+            width: min-content;
+            height: min-content;
+        }
+    }
+}

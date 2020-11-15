@@ -1,0 +1,84 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)), url("../images/cover.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__container {
+    margin-bottom: 1rem;
+
+    @include breakpoint-down(large){
+      margin-bottom: 7rem;
+    }
+
+    h3 {
+      height: fit-content;
+      color: $yellow;
+      font-size: 2.0625rem;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+
+      @include breakpoint-down(xsmall){
+        font-size: 1.7286rem; 
+      }
+    }
+
+    h2 {
+      display: block;
+      height: fit-content;
+      width: 100%;
+      text-align: center;
+      color: $white;
+      font-weight: 300;
+      font-size: 2.625rem;
+
+      @include breakpoint-down(xsmall){
+       font-size: 2.2rem; 
+      }
+
+      span.yellow {
+        color: $yellow;
+        display: inline-block;
+      }
+      
+      span.width{
+        display: inline-block;
+        width: 80%;
+      }
+
+    }
+  }
+
+  .button {
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    background-color: $lightBlue;
+    color: white;
+    font-size: 2.375rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5rem;
+    padding: 1.5rem 6.25rem 1.25rem 5.625rem;
+    margin-top: 0.75rem;
+    margin-bottom: 2.375rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    @include breakpoint-down(xsmall){
+      font-size: 1.7rem; 
+      padding: 1.26rem 5.24rem 1.05rem 4.714rem;
+      text-align: center;
+    }
+
+    &:hover{
+        opacity: 0.8;
+    }
+  }
+}
